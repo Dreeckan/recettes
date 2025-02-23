@@ -1,10 +1,16 @@
 :root {
-  // brand colors
-  --c-brand: #1199cb;
-  --c-brand-light: #1199cb;
+  --vp-c-accent: #1199cb;
+  --vp-c-accent-bg: #1199cb;
+  --vp-c-accent-hover: #1F71CB;
+  --vp-c-accent-soft: rgb(31 113 203 / 16%);
+  --vp-c-accent-text: var(--vp-c-white);
+  --vp-c-gutter: var(--vp-c-accent);
 }
 
-html.dark {
-  --c-brand: #1199cb;
-  --c-brand-light: #1199cb;
+[data-theme='dark'] {
+  --vp-c-accent: #1199cb;
+  --vp-c-accent-bg: #1199cb;
+  --vp-c-accent-hover: #1F71CB;
+  --vp-c-accent-soft: rgb(31 113 203 / 16%);
+  --vp-c-gutter: var(--vp-c-accent);
 }

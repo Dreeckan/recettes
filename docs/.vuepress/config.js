@@ -1,9 +1,8 @@
-import { defaultTheme } from '@vuepress/theme-default'
-import { defineUserConfig } from 'vuepress/cli'
-import { viteBundler } from '@vuepress/bundler-vite'
-import { globSync } from "glob"
-import { appendDatePlugin } from '@vuepress/plugin-append-date'
-import { searchPlugin } from '@vuepress/plugin-search'
+import {defaultTheme} from '@vuepress/theme-default';
+import {defineUserConfig} from 'vuepress/cli';
+import {viteBundler} from '@vuepress/bundler-vite';
+import {globSync} from "glob";
+import {slimsearchPlugin} from '@vuepress/plugin-slimsearch';
 
 let fichiersSales = globSync('docs/sale/**/*.md').map(f => '/' + f.split('docs/')[1])
 .reverse();
@@ -34,13 +33,11 @@ export default defineUserConfig({
         children: fichiersSucres
       }
     ],
-    plugins: [
-      appendDatePlugin(),
-      searchPlugin({
-        // options
-      }),
-    ],
   }),
-
+  plugins: [
+    slimsearchPlugin({
+      indexContent: true,
+    }),
+  ],
   bundler: viteBundler(),
 })
