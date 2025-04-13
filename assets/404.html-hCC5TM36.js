@@ -1,0 +1,1 @@
+import{_ as e,c as o,b as n,o as a}from"./app-Apqyg0rn.js";const r={};function l(c,t){return a(),o("div",null,t[0]||(t[0]=[n("p",null,"404 Not Found",-1)]))}const p=e(r,[["render",l]]),u=JSON.parse('{"path":"/404.html","title":"","lang":"fr-FR","frontmatter":{"layout":"NotFound"},"git":{},"filePathRelative":null,"excerpt":"<p>404 Not Found</p>\\n"}');export{p as comp,u as data};
